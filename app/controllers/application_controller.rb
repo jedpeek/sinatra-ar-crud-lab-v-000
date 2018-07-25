@@ -25,7 +25,7 @@ class ApplicationController < Sinatra::Base
 
   get '/posts/:id' do
     binding.pry
-    @post = Post.find(params[:id]).first
+    @post = Post.find(params[:post][:id]).first
     erb :'show'
   end
 end
